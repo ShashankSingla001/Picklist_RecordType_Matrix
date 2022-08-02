@@ -19,8 +19,8 @@ Components Include:-
         multicombobox
         
 # ----------------------------------------------- #
-post deployment pre-requisites
-# add picklist_RecordTypeMapper component to App Page/Record Page/Tab
-# please make sure to assign the class to the User profile who is going to access the component.
+# post deployment pre-requisites
+    add picklist_RecordTypeMapper component to App Page/Record Page/Tab
+    please make sure to assign the class to the User profile who is going to access the component.
 
 
