@@ -7,7 +7,7 @@ this utility will be handy as one can:-
 # Quickly search any object and Picklist field present in the org and check the mapping the experience will save a lot of time to do it unlike how we currently have to check the values navigating each recordtype.
 # leverage the option to copy a JSON mapping which can be used for internal purpose.
 
-Do Checkout this Article for Its Features:
+Do Checkout this Article for Its Features: https://medium.com/@shashanksingla/salesforces-record-type-picklist-matrix-a112429c8150
 
 
 Components Include:-
