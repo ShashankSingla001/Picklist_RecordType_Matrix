@@ -1,18 +1,20 @@
-# Salesforce DX Project: Next Steps
+# Picklist_RecordType_Matrix
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This Source contains a utility matrix to visually understand the mapping of a Picklist/Mutliselect picklist field to different Record Types present on that object.
+There is a good use case of its usage, be it for a Developer/Admin to track a specific value or for a business user to decide which value belongs to what recortype & take decisions accordingly. 
 
-## How Do You Plan to Deploy Your Changes?
+this utility will be handy as one can:- 
+# Quickly search any object and Picklist field present in the org and check the mapping the experience will save a lot of time to do it unlike how we currently have to check the values navigating each recordtype.
+# leverage the option to copy a JSON mapping which can be used for internal purpose.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Do Checkout this Article for Its Features:
 
-## Configure Your Salesforce DX Project
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Components Include:-
+# ----------------------------------------------- #
+ # ApexClass :-
+        OrgObjectsCtrl
+# LightningComponentBundle :-
+        multicombobox
+        picklist_RecordTypeMapper
+        
