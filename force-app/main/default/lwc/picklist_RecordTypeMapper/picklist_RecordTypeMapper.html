@@ -1,0 +1,50 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+  <div class="content slds-box">
+    <h1 class="slds-align_absolute-center titleClass" slot="title">
+      RecordType - Picklist Matrix
+    </h1>
+    <template if:true={showSpinner}>
+      <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+    </template>
+    <div class="slds-grid slds-wrap maincard">
+      <div class="slds-col slds-size_5-of-12 slds-p-around_medium lgc-bg">
+        <template if:true={objectsAvailable}>
+          <c-multicombobox label="Select Object" options={objectsAvailable} selected-value={objectApiName}
+            onselect={handlePickselect}></c-multicombobox>
+        </template>
+      </div>
+      <div class="slds-col slds-size_1-of-12"></div>
+      <div class="slds-col slds-size_5-of-12 slds-p-around_medium lgc-bg">
+        <template if:true={picklistFields}>
+          <c-multicombobox label="Picklist Field" options={picklistFields} selected-value={qualifiedFieldName}
+            onselect={handlePickselect} disabled={checkdiff}></c-multicombobox>
+        </template>
+      </div>
+      <div class="slds-col slds-size_5-of-12 slds-p-around_medium lgc-bg">
+        <template if:true={rTypes}>
+          <c-multicombobox label="Record Types" options={rTypes} multi-select="true" selected-values={selectedRTypes}
+            onselect={handlePickselect} disabled={checkdiff}></c-multicombobox>
+        </template>
+      </div>
+      <template if:true={showTable}>
+        <div class="slds-col slds-size_1-of-1 slds-p-around_medium lgc-bg">
+          <div class="slds-col slds-size_11-of-12">
+            <span>Copy the Mapping JSON</span>
+            <lightning-button-icon icon-name="utility:copy" title="Copy" variant="brand" size="small"
+              class="slds-var-m-left_xx-small" onclick={copyDay} alternative-text="Copy">
+            </lightning-button-icon>
+            <lightning-input type="checkbox" label="Include labels in RecordType-Picklist Mapping ?" name="input3"
+              checked={includeLabels} onchange={handleChange}></lightning-input>
+          </div>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-scrollable dataTableDiv">
+          <lightning-datatable key-field="Record Type" data={rData} columns={rColumns} hide-checkbox-column
+            wrap-text-max-lines="3" min-column-width="120">
+          </lightning-datatable>
+        </div>
+      </template>
+    </div>
+  </div>
+</template>

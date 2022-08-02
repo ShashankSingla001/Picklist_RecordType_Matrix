@@ -1,0 +1,19 @@
+.content {
+  background-color: azure;
+  font-family: monospace;
+    font-size: 14px titleClass;
+    
+}
+
+.titleClass {
+    font-size: 18px;
+    font-weight:700;
+    border: 2px dotted;
+    border-radius:1rem;
+}
+.dataTableDiv{
+border-radius:0.5rem;
+max-height: 18rem;
+ height: 300px; 
+ border: 2px dashed black
+}
